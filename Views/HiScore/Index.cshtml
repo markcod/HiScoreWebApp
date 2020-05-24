@@ -1,0 +1,43 @@
+﻿@model IEnumerable<HiScoreWebApp.Models.HiScore>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>HiScore</h1>
+
+<div class="main-content">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.Fornavn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Efternavn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Score)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Fornavn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Efternavn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Score)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
